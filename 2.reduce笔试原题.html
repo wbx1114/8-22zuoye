@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-      function process( url ){
-        
-      }
+        let url = 'http://www.baidu.com/?name=zhangsan&age=18&sex=nan#'
+        function process(url) {
+            let arr = []
+            url = url.slice(url.indexOf('?') + 1, url.indexOf('#'))
+            // console.log(url);
+            arr = url.split('&')
+            // console.log(arr);
+            //Array.reduce(function(累加器，当前值){return 累加器}，数据类型)
+          return  arr.reduce((acc, item) => {
+                let [key, value] = item.split('=')
+                acc[key] = value
+                return acc
+            }, {})
+        }
+        console.log(process(url));
     </script>
 </body>
+
 </html>
