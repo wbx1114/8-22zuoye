@@ -1,0 +1,12 @@
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/banner.css ***!
+  \*************************************************************************/
+.banner {
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+}
+
+body {
+    background: green;
+}
